@@ -1,0 +1,127 @@
+/* Stiluri generale */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+h1, h2, h3 {
+  color: #023047;
+}
+
+/* Secțiunea Hero */
+.hero {
+  background-image: url('../../../assets/images/hero-fishing.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero-content h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+
+.hero-content .btn {
+  background-color: #0077b6;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.hero-content .btn:hover {
+  background-color: #023047;
+}
+
+/* Secțiunea Features */
+.features {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f1f1f1;
+}
+
+.feature-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  width: 300px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.feature-item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.feature-item h3 {
+  margin: 15px 0 10px;
+}
+
+.feature-item p {
+  color: #555;
+}
+
+/* Secțiunea Testimonials */
+.testimonials {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #023047;
+  color: white;
+}
+
+.testimonial-item {
+  margin-bottom: 30px;
+}
+
+.testimonial-item blockquote {
+  font-size: 1.2em;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+/* Stilizare butoane */
+.feature-item .btn {
+  background-color: #0077b6;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.feature-item .btn:hover {
+  background-color: #00b4d8;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.feature-item .btn:active {
+  background-color: #023047;
+}
+
+.feature-item .btn:focus {
+  outline: none;
+  box-shadow: 0 0 5px #0077b6;
+}
