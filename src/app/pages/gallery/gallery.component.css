@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #f8f9fa;
+    background-color: #5892cb;
     color: #2c3e50;
   }
   
@@ -11,7 +11,7 @@ body {
   
   .image-slider {
     position: relative;
-    max-width: 600px;
+    max-width: 1000px;
     margin: auto;
     overflow: hidden;
   }
@@ -19,16 +19,6 @@ body {
   .slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
-  }
-  
-  .slider-image {
-    min-width: 100%;
-    display: none;
-    border-radius: 10px;
-  }
-  
-  .slider-image.active {
-    display: block;
   }
   
   .prev-btn,
@@ -55,5 +45,16 @@ body {
   .prev-btn:hover,
   .next-btn:hover {
     background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .slider-image {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .slider-image.active {
+    display: block;
+    opacity: 1;
   }
   
