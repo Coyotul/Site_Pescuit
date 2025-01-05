@@ -1,1 +1,28 @@
-<p>gallery works!</p>
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerie Foto</title>
+  <link rel="stylesheet" href="styles/gallery.css">
+</head>
+<body>
+  <header>
+    <h1>Galerie Foto</h1>
+    <p>Explorează capturile impresionante ale comunității noastre.</p>
+  </header>
+
+  <section class="image-slider">
+    <button class="prev-btn">◀</button>
+    <div class="slider">
+      <img src="../assets/images/gallery1.jpg" alt="Imagine 1" class="slider-image active">
+      <img src="../assets/images/gallery2.jpg" alt="Imagine 2" class="slider-image">
+      <img src="../assets/images/gallery3.jpg" alt="Imagine 3" class="slider-image">
+      <img src="../assets/images/gallery4.jpg" alt="Imagine 4" class="slider-image">
+    </div>
+    <button class="next-btn">▶</button>
+  </section>
+
+  <script src="scripts/gallery.js"></script>
+</body>
+</html>

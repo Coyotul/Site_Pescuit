@@ -65,4 +65,31 @@
     </blockquote>
     <p>- Ana, explorator de natură</p>
   </div>
+
+  <form action="/submit" method="POST" class="contact-form">
+    <h3>Contactează-ne</h3>
+    <label for="name">Nume:</label>
+    <input type="text" id="name" name="name" required />
+  
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required />
+  
+    <label for="message">Mesaj:</label>
+    <textarea id="message" name="message" rows="4" required></textarea>
+  
+    <label for="topic">Subiect:</label>
+    <select id="topic" name="topic">
+      <option value="tips">Sfaturi de pescuit</option>
+      <option value="locations">Locații</option>
+      <option value="other">Altele</option>
+    </select>
+  
+    <label>
+      <input type="checkbox" name="subscribe" />
+      Vreau să mă abonez la newsletter.
+    </label>
+  
+    <button type="submit" class="btn">Trimite</button>
+  </form>
+  
 </section>

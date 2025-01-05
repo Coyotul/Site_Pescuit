@@ -1,3 +1,14 @@
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #54d7a2;
+  --text-color: #2c3e50;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--primary-color);
+  }
+
 /* Stiluri pentru Features */
 .feature-list {
     display: flex;
@@ -32,13 +43,29 @@
   /* Stiluri pentru Blog */
   .blog {
     padding: 50px 20px;
-    background-color: #f9f9f9;
+    background-color: #513ac4;
   }
   
-  .blog h2 {
-    text-align: center;
-    margin-bottom: 30px;
+  .blog h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #fff;
+    margin: 10px auto 0;
   }
+  
+
+  .contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  outline: 2px solid #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.blog-list article a:active {
+  color: #0056b3;
+}
   
   .blog-list {
     display: flex;
@@ -77,7 +104,7 @@
   max-width: 800px;
   margin: 40px auto;
   padding: 20px;
-  background-color: #f4f4f4;
+  background-color: #54d7a2;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -114,9 +141,55 @@
 }
 
 .article-container blockquote {
-  background-color: #f0f0f0;
+  background-color: #49b3bc;
   padding: 15px;
   font-style: italic;
   border-left: 5px solid #3498db;
   margin-bottom: 20px;
 }
+
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .contact-form label {
+    font-weight: bold;
+  }
+  
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form select,
+  .contact-form button {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .contact-form textarea {
+    resize: vertical;
+  }
+  
+  .contact-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .contact-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .contact-form input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+  }
+  
