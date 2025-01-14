@@ -28,8 +28,8 @@
               "src/styles.css"
             ],
             "scripts": [
-  "src/assets/js/gallery.js"
-],
+              "src/assets/js/gallery.js"
+            ],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {

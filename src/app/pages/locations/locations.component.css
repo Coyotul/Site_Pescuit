@@ -1,0 +1,23 @@
+.locations-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .location-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .location-card h2 {
+    margin: 0;
+    font-size: 1.5em;
+  }
+  
+  .location-card p {
+    margin: 10px 0 0;
+    color: #666;
+  }
+  

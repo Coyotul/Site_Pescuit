@@ -1,18 +1,14 @@
-<div class="article-container">
-    <h2>Ghid complet pentru începători</h2>
-    <img src="../assets/images/ghid.jpg" alt="Ghid pescuit" />
-    <p>Pentru începătorii în pescuit, totul poate părea puțin copleșitor la început, dar nu îți face griji! Acest ghid te va învăța pașii de bază și îți va oferi informațiile necesare pentru a înțelege mai bine acest sport minunat.</p>
-    
-    <h3>1. Alegerea echipamentului</h3>
-    <p>Primul pas este să îți alegi echipamentul corect. Un set complet de undiță și mulinetă este esențial, iar tipul de echipament depinde de tipul de pescuit pe care dorești să îl practici. O undiță mai ușoară este ideală pentru pescuitul la crap sau la pești mici.</p>
-  
-    <h3>2. Învățarea tehnicilor de aruncare</h3>
-    <p>Aruncarea corectă a undiței este cheia pentru un pescuit de succes. Începe cu aruncări scurte, apoi încearcă să crești distanța pe măsură ce capătă mai multă încredere în abilitățile tale.</p>
-  
-    <h3>3. Siguranța pe apă</h3>
-    <p>În timp ce pescuiești, asigură-te că ai un vestă de salvare și că respecți reglementările de siguranță ale locului. Este important să fii pregătit pentru orice situație, mai ales dacă pescuiești într-o zonă mai izolat.</p>
-  
-    <h3>4. Desigur, răbdarea este cheia</h3>
-    <p>În final, pescuitul este o activitate care necesită răbdare. Învață să te bucuri de fiecare moment petrecut în natură, indiferent de câte pești prindi.</p>
+<div class="locations-container">
+  <h1>Locații Disponibile</h1>
+
+  <div *ngIf="locations?.length > 0; else noLocations">
+    <div class="location-card" *ngFor="let location of locations">
+      <h2>{{ location.name }}</h2>
+      <p>{{ location.description }}</p>
+    </div>
   </div>
-  
+
+  <ng-template #noLocations>
+    <p>Nu există locații disponibile momentan. Încearcă mai târziu!</p>
+  </ng-template>
+</div>
