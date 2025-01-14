@@ -6,12 +6,12 @@ import { importProvidersFrom, ApplicationConfig } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
-import { LocationsComponent } from './pages/locations/locations.component';
 import { TipsComponent } from './pages/tips/tips.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { ArticleCrapComponent } from './pages/article-crap/article-crap.component';
 import { ArticleLocuriComponent } from './pages/article-locuri/article-locuri.component';
 import { ArticleGhidComponent } from './pages/article-ghid/article-ghid.component';
+import { LocationsComponent } from './pages/locations/locations.component';
 
 
 const routes: Routes = [

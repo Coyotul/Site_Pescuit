@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LocationsService } from '../../locations.service';
+import { Loader } from '@googlemaps/js-api-loader'; // Folosind loaderul pentru API-ul Google Maps
 
 @Component({
   selector: 'app-locations',
@@ -7,19 +7,24 @@ import { LocationsService } from '../../locations.service';
   styleUrls: ['./locations.component.css']
 })
 export class LocationsComponent implements OnInit {
-  locations: any[] = [];
-
-  constructor(private locationsService: LocationsService) {}
+  map!: google.maps.Map;  // Folosirea operatorului de asigurare a inițializării
 
   ngOnInit(): void {
-    this.locationsService.getLocations().subscribe(
-      (data) => {
-        this.locations = data;
-        console.log(this.locations); // Debugging
-      },
-      (error) => {
-        console.error('Error fetching locations:', error);
-      }
-    );
+    const loader = new Loader({
+      apiKey: 'AIzaSyBvb2jeZTISnhpqzoEzIOz0MR3fUsq0lJY',
+      version: 'weekly',
+      libraries: ['places']
+    });
+
+    loader.load().then(() => {
+      this.initMap();
+    });
+  }
+
+  initMap(): void {
+    this.map = new google.maps.Map(document.getElementById('map') as HTMLElement, {
+      center: { lat: 45.9432, lng: 24.9668 },
+      zoom: 8
+    });
   }
 }

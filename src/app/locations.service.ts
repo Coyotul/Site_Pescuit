@@ -6,11 +6,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class LocationsService {
-  private apiUrl = 'https://mockapi.io/endpoint/locations'; // Înlocuiește cu URL-ul API-ului tău
+  private apiUrl = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json'; // Replace with your API URL
 
   constructor(private http: HttpClient) { }
 
-  getLocations(): Observable<any[]> {
-    return this.http.get<any[]>(this.apiUrl);
+  getLocations(lat: number, lng: number, radius: number): Observable<any> {
+    const url = `${this.apiUrl}?lat=${lat}&lng=${lng}&radius=${radius}`;
+    return this.http.get<any>(url);
   }
 }

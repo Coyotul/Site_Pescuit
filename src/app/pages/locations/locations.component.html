@@ -1,14 +1,10 @@
-<div class="locations-container">
-  <h1>Locații Disponibile</h1>
-
-  <div *ngIf="locations?.length > 0; else noLocations">
-    <div class="location-card" *ngFor="let location of locations">
-      <h2>{{ location.name }}</h2>
+<div class="locations">
+  <h2>Fishing Locations</h2>
+  <div id="map" style="height: 500px; width: 100%;"></div>
+  <ul>
+    <li *ngFor="let location of locations">
+      <h3>{{ location.name }}</h3>
       <p>{{ location.description }}</p>
-    </div>
-  </div>
-
-  <ng-template #noLocations>
-    <p>Nu există locații disponibile momentan. Încearcă mai târziu!</p>
-  </ng-template>
+    </li>
+  </ul>
 </div>

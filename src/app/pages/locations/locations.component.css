@@ -1,23 +1,28 @@
-.locations-container {
+#map {
+    height: 500px;
+    width: 100%;
+  }
+  
+  .locations {
     padding: 20px;
-    text-align: center;
   }
   
-  .location-card {
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin: 10px 0;
+  .locations h2 {
+    margin-bottom: 20px;
+  }
+  
+  .locations ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .locations li {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #f9f9f9;
   }
   
-  .location-card h2 {
-    margin: 0;
-    font-size: 1.5em;
+  .locations li h3 {
+    margin: 0 0 10px 0;
   }
-  
-  .location-card p {
-    margin: 10px 0 0;
-    color: #666;
-  }
-  
